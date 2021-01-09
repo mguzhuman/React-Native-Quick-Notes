@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b0c4648e-650e-40ad-94de-bfcc7f4fc6d9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/no-items.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainLayout.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/AddNote.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/CreateModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/EditModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Note.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/AppButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/AppCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/AppLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/AppText.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ui/AppTextBold.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/note/NoteState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/note/noteContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/note/noteReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/screen/ScreenState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/screen/screenContext.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/screen/screenReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/types.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/http.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/MainScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/screens/NoteScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
+  </component>
+  <component name="ProjectId" id="1ldiVlhtT6ptLwJgLPM2o3ciJ1w" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/fonts" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="diff.base" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/fonts" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0c4648e-650e-40ad-94de-bfcc7f4fc6d9" name="Default Changelist" comment="" />
+      <created>1607933395006</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607933395006</updated>
+      <workItem from="1607933396085" duration="2677000" />
+      <workItem from="1607940162112" duration="1176000" />
+      <workItem from="1607941667049" duration="2531000" />
+      <workItem from="1607945358442" duration="24643000" />
+      <workItem from="1608096092953" duration="43000" />
+      <workItem from="1610083325280" duration="22509000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
