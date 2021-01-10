@@ -4,12 +4,19 @@ import {AntDesign} from '@expo/vector-icons';
 
 import {THEME} from "../theme";
 import {AppTextBold} from "./ui/AppTextBold";
+import {CreateModal} from "./CreateModal";
 
 export const AddNote = ({onSubmit}) => {
+    const [modal, setModal] = useState(false);
     return (
         <View style={styles.block}>
+            <CreateModal
+                visible={modal}
+                onCancel={()=>setModal(false)}
+                onSave={onSubmit}
+            />
             <AppTextBold style={styles.text}>Notes list</AppTextBold>
-            <AntDesign.Button onPress={onSubmit} name='pluscircleo'>Add</AntDesign.Button>
+            <AntDesign.Button onPress={()=>setModal(true)} name='pluscircleo'>Add</AntDesign.Button>
         </View>
     )
 }

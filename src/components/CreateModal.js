@@ -1,9 +1,11 @@
 import React, {useState} from "react";
-import {Dimensions, StyleSheet, View, Modal} from "react-native";
+import {Dimensions, StyleSheet, View, Modal, TextInput} from "react-native";
 import {FontAwesome, AntDesign} from '@expo/vector-icons';
 
 import {THEME} from '../theme';
 import {AppButton} from "./ui/AppButton";
+import {AppText} from "./ui/AppText";
+import {AppTextBold} from "./ui/AppTextBold";
 
 export const CreateModal = ({visible, onCancel, onSave}) => {
     const [title, setTitle] = useState('')
@@ -15,14 +17,35 @@ export const CreateModal = ({visible, onCancel, onSave}) => {
         onCancel()
     }
 
-
     return (
         <Modal
             visible={visible}
             animationType='slide'
         >
-            New note
-
+            <AppTextBold>
+                New Note
+            </AppTextBold>
+            <View>
+                <AppTextBold style={styles.title}>
+                    Title:
+                </AppTextBold>
+                <TextInput
+                    onChangeText={setTitle}
+                    value={title}
+                    maxLength={24}
+                />
+            </View>
+            <View>
+                <AppTextBold style={styles.title}>
+                    Text:
+                </AppTextBold>
+                <TextInput
+                    multiline
+                    numberOfLines={8}
+                    onChangeText={setText}
+                    value={text}
+                />
+            </View>
             <View style={styles.buttons}>
                 <View style={styles.button}>
                     <AppButton color={THEME.DANGER_COLOR} onPress={cancelHandler}>
@@ -30,7 +53,7 @@ export const CreateModal = ({visible, onCancel, onSave}) => {
                     </AppButton>
                 </View>
                 <View style={styles.button}>
-                    <AppButton color={THEME.GREEN_COLOR} onPress={() => onSave(title,text)}>
+                    <AppButton color={THEME.GREEN_COLOR} onPress={() => onSave(title, text)}>
                         <FontAwesome name='save' size={20} color='#fff'/>
                     </AppButton>
                 </View>

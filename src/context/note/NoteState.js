@@ -24,11 +24,11 @@ export const NoteState = ({children}) => {
     const {changeScreen} = useContext(ScreenContext);
     const [state, dispatch] = useReducer(noteReducer, initialState)
 
-    const addNote = async title => {
+    const addNote = async (title,text) => {
         clearError()
         try {
             const data = await Http.post('https://react-native-quick-notes-default-rtdb.europe-west1.firebasedatabase.app/notes.json',{title})
-            dispatch({type: ADD_NOTE, title, id: data.name})
+            dispatch({type: ADD_NOTE, title,text, id: data.name})
         } catch (e) {
             showError('Error...')
         }
@@ -60,11 +60,11 @@ export const NoteState = ({children}) => {
 
 
     }
-    const updateNote = async (id, title) => {
+    const updateNote = async (id, title,text) => {
         clearError()
         try {
             await Http.patch(`https://react-native-quick-notes-default-rtdb.europe-west1.firebasedatabase.app/notes/${id}.json`,{title})
-            dispatch({type: UPDATE_NOTE, id, title})
+            dispatch({type: UPDATE_NOTE, id, title,text})
         } catch (e){
             showError('Error...')
             console.log(e)

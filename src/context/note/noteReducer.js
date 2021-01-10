@@ -10,17 +10,18 @@ import {
 } from "../types";
 
 const handlers = {
-    [ADD_NOTE]: (state, {title, id}) => ({
-        ...state, notes: [...state.notes, {id, title}]
+    [ADD_NOTE]: (state, {title, id, text}) => ({
+        ...state, notes: [...state.notes, {id, title, text}]
     }),
 
     [REMOVE_NOTE]: (state, {id}) => ({
         ...state, notes: state.notes.filter(note => note.id !== id)
     }),
-    [UPDATE_NOTE]: (state, {title, id}) => ({
+    [UPDATE_NOTE]: (state, {title, id, text}) => ({
         ...state, notes: state.notes.map(note => {
             if (note.id === id) {
                 note.title = title
+                note.text = text
             }
             return note
         })
