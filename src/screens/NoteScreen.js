@@ -32,12 +32,16 @@ export const NoteScreen = () => {
                 value={note}
                 onSave={saveHandler}
             />
-            <AppCard style={styles.card}>
-                <AppTextBold style={styles.title}  onLongPress={() => setModal('title')}>{note.title}</AppTextBold>
-            </AppCard>
-            <AppCard style={styles.card}>
-                <AppText style={styles.text}  onLongPress={() => setModal('text')}>{note.text} </AppText>
-            </AppCard>
+            <TouchableOpacity  activeOpacity={0.9} onLongPress={() => setModal('title')}>
+                <AppCard style={styles.card}>
+                    <AppTextBold style={styles.title} >{note.title}</AppTextBold>
+                </AppCard>
+            </TouchableOpacity>
+            <TouchableOpacity  activeOpacity={0.9} onLongPress={() => setModal('text')}>
+                <AppCard style={styles.card}>
+                    <AppText style={styles.text} >{note.text} </AppText>
+                </AppCard>
+            </TouchableOpacity>
             <View style={styles.buttons}>
                 <View style={styles.button}>
                     <AppButton color={THEME.GREY_COLOR} onPress={() => changeScreen(null)}>
@@ -72,9 +76,4 @@ const styles = StyleSheet.create({
         marginBottom: 20,
         padding: 15
     }
-    // backBtn:{
-    // },
-    // deleteBtn:{
-    //
-    // }
 })
