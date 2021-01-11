@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-import {StyleSheet, View, Dimensions} from 'react-native';
+import {StyleSheet, View, Dimensions, TouchableOpacity} from 'react-native';
 import {FontAwesome, AntDesign} from '@expo/vector-icons';
 
 import {THEME} from '../theme';
@@ -9,38 +9,38 @@ import {AppTextBold} from "../components/ui/AppTextBold";
 import {AppButton} from "../components/ui/AppButton";
 import {NoteContext} from "../context/note/noteContext";
 import {ScreenContext} from "../context/screen/screenContext";
+import {AppText} from "../components/ui/AppText";
 
 export const NoteScreen = () => {
     const {notes, updateNote, removeNote} = useContext(NoteContext)
     const {noteId, changeScreen} = useContext(ScreenContext)
 
-    const [modal, setModal] = useState(false);
+    const [modal, setModal] = useState('');
 
     const note = notes.find(note => note.id === noteId)
 
-
-    const saveHandler = async title => {
-       await updateNote(note.id, title)
-        setModal(false)
+    const saveHandler = async (title, text) => {
+        await updateNote(note.id, title, text)
+        setModal('')
     }
 
     return (
         <View>
             <EditModal
                 visible={modal}
-                onCancel={() => setModal(false)}
-                value={note.title}
+                onCancel={() => setModal('')}
+                value={note}
                 onSave={saveHandler}
             />
             <AppCard style={styles.card}>
-                <AppTextBold style={styles.title}>{note.title}</AppTextBold>
-                <AppButton onPress={() => setModal(true)}>
-                    <FontAwesome name='edit' size={20}/>
-                </AppButton>
+                <AppTextBold style={styles.title}  onLongPress={() => setModal('title')}>{note.title}</AppTextBold>
+            </AppCard>
+            <AppCard style={styles.card}>
+                <AppText style={styles.text}  onLongPress={() => setModal('text')}>{note.text} </AppText>
             </AppCard>
             <View style={styles.buttons}>
                 <View style={styles.button}>
-                    <AppButton color={THEME.GREY_COLOR} onPress={()=> changeScreen(null)}>
+                    <AppButton color={THEME.GREY_COLOR} onPress={() => changeScreen(null)}>
                         <AntDesign name='back' size={20} color='#fff'/>
                     </AppButton>
                 </View>
@@ -64,6 +64,9 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 20,
+    },
+    text: {
+        fontSize: 14,
     },
     card: {
         marginBottom: 20,

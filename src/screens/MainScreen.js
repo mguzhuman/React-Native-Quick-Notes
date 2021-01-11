@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext, useCallback} from 'react';
-import {FlatList, StyleSheet, View, Image, Dimensions, StatusBar} from 'react-native';
+import {FlatList, StyleSheet, View, Image, Dimensions, RefreshControl, SafeAreaView} from 'react-native';
 import {AddNote} from "../components/AddNote";
 import {Note} from "../components/Note";
 import {THEME} from "../theme";
@@ -43,11 +43,14 @@ export const MainScreen = () => {
         )
     }
 
-    let content = <View style={{width: deviceWidth}}>
+    let content = <View style={{...styles.container,width: deviceWidth}}>
         <FlatList
             keyExtractor={item => item.id.toString()}
             data={notes}
             renderItem={({item}) => <Note note={item} onRemove={removeNote} onOpen={changeScreen}/>}
+            refreshControl={
+                <RefreshControl refreshing={loading} onRefresh={loadNotes}/>
+            }
         />
     </View>
     if (notes.length === 0) {
@@ -58,10 +61,10 @@ export const MainScreen = () => {
     }
 
     return (
-        <View>
+        <SafeAreaView style={styles.container}>
             <AddNote onSubmit={addNote}/>
             {content}
-        </View>
+        </SafeAreaView>
     );
 };
 
@@ -77,13 +80,16 @@ const styles = StyleSheet.create({
         height: '100%',
         resizeMode: 'contain'
     },
-    center:{
-        flex:1,
+    center: {
+        flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
     },
-    error:{
+    error: {
         fontSize: 20,
         color: THEME.DANGER_COLOR
-    }
+    },
+    container: {
+        flex: 1,
+    },
 })

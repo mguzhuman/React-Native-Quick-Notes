@@ -24,11 +24,14 @@ export const NoteState = ({children}) => {
     const {changeScreen} = useContext(ScreenContext);
     const [state, dispatch] = useReducer(noteReducer, initialState)
 
-    const addNote = async (title,text) => {
+    const addNote = async (title, text) => {
         clearError()
         try {
-            const data = await Http.post('https://react-native-quick-notes-default-rtdb.europe-west1.firebasedatabase.app/notes.json',{title})
-            dispatch({type: ADD_NOTE, title,text, id: data.name})
+            const data = await Http.post('https://react-native-quick-notes-default-rtdb.europe-west1.firebasedatabase.app/notes.json', {
+                title,
+                text
+            })
+            dispatch({type: ADD_NOTE, title, text, id: data.name})
         } catch (e) {
             showError('Error...')
         }
@@ -60,12 +63,16 @@ export const NoteState = ({children}) => {
 
 
     }
-    const updateNote = async (id, title,text) => {
+    const updateNote = async (id, title, text) => {
+       // console.log({id, title, text})
         clearError()
         try {
-            await Http.patch(`https://react-native-quick-notes-default-rtdb.europe-west1.firebasedatabase.app/notes/${id}.json`,{title})
-            dispatch({type: UPDATE_NOTE, id, title,text})
-        } catch (e){
+            await Http.patch(`https://react-native-quick-notes-default-rtdb.europe-west1.firebasedatabase.app/notes/${id}.json`, {
+                title,
+                text
+            })
+            dispatch({type: UPDATE_NOTE, id, title, text})
+        } catch (e) {
             showError('Error...')
             console.log(e)
         }
@@ -91,9 +98,6 @@ export const NoteState = ({children}) => {
             hideLoader()
         }
     }
-
-
-
 
     return <NoteContext.Provider value={{
         fetchNotes,

@@ -4,35 +4,43 @@ import {THEME} from "../theme";
 import {AppButton} from "./ui/AppButton";
 
 export const EditModal = ({visible, onCancel, value, onSave}) => {
-    const [title, setTitle] = useState(value)
+    const [newValue, setNewValue] = useState(value)
+
 
     const saveHandler = () => {
-        if (title.trim().length < 3) {
-            Alert.alert('Error!', `The minimum length is 3 characters. Now ${title.length} characters.`)
+        if (newValue[visible].trim().length < 3) {
+            Alert.alert('Error!', `The minimum length is 3 characters. Now ${newValue[visible].length} characters.`)
         } else {
-            onSave(title)
+            console.log(newValue)
+            onSave(newValue.title, newValue.text)
         }
     }
 
     const cancelHandler = () => {
-        setTitle(value)
+        setNewValue(value)
         onCancel()
+    }
+
+    const changeHandler = value => {
+        const inputValue = {...newValue, [visible]: value}
+        setNewValue(inputValue)
     }
 
     return (
         <Modal
-            visible={visible}
+            visible={!!visible}
             animationType='slide'
         >
             <View style={styles.wrap}>
                 <TextInput
                     style={styles.input}
-                    placeholder='Type title'
+                    placeholder={`Type ${visible}`}
+                    multiline
                     autoCapitalize='none'
                     autoCorrect={false}
                     maxLength={64}
-                    value={title}
-                    onChangeText={setTitle}
+                    value={newValue[visible]}
+                    onChangeText={changeHandler}
                 />
                 <View style={styles.buttons}>
                     <AppButton onPress={cancelHandler} color={THEME.DANGER_COLOR}>Cancel</AppButton>

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "react-native-test",
-    "slug": "react-native-test",
+    "name": "react-native-quick-notes",
+    "slug": "react-native-quick-notes",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
