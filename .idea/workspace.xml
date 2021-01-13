@@ -2,35 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0c4648e-650e-40ad-94de-bfcc7f4fc6d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/fonts/Roboto-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/no-items.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainLayout.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/AddNote.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/CreateModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/EditModal.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Note.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/AppButton.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/AppCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/AppLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/AppText.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ui/AppTextBold.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/note/NoteState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/note/noteContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/note/noteReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/screen/ScreenState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/screen/screenContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/screen/screenReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/types.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/http.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/MainScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/screens/NoteScreen.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
